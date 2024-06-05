@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from markupsafe import escape
 
 app = Flask(__name__)
 
@@ -6,15 +7,15 @@ app = Flask(__name__)
 def main():
     return render_template("main.html")
 
-@app.route('/clothes/')
+@app.route('/main/clothes/')
 def clothes():
     return render_template("clothes.html")
 
-@app.route('/hats/')
+@app.route('/main/hats/')
 def hats():
     return render_template("hats.html")
 
-@app.route('/shoes/')
+@app.route('/main/shoes/')
 def shoes():
     return render_template("shoes.html")
 
