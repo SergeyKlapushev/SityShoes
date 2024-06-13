@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type='text/css'>
+    <title>
+        {%block title%}
+            Магазин одежды
+        {%endblock%}
+    </title>
+</head>
+
+<body>
+    <center>
+        {% block content%}
+            "Вы находитесь на странице"
+        {%endblock%}
+    </center>
+    <div>
+        <ul>
+            <li><a href="/main/">Главная</a></li>
+            <li><a href="/hats/">Шляпы</a></li>
+            <li><a href="/clothes/">Одежда</a></li>
+            <li><a href="/shoes/">Обувь</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

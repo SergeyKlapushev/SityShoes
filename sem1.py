@@ -1,23 +1,35 @@
 from flask import Flask, render_template
-from markupsafe import escape
 
 app = Flask(__name__)
 
 @app.route('/main/')
 def main():
-    return render_template("main.html")
+    context ={
+        "zagolovok" : "Главная",
+        "hi" : "Добро пожаловать в наш магазин"
+    }
+    return render_template("main.html", **context)
 
-@app.route('/main/clothes/')
-def clothes():
-    return render_template("clothes.html")
-
-@app.route('/main/hats/')
+@app.route('/hats/')
 def hats():
-    return render_template("hats.html")
+    context ={
+        "zagolovok" : "Шляпы",
+    }
+    return render_template("hats.html", **context)
 
-@app.route('/main/shoes/')
+@app.route('/clothes/')
+def clothes():
+    context ={
+        "zagolovok" : "Одежда",
+    }
+    return render_template("clothes.html", **context)
+
+@app.route('/shoes/')
 def shoes():
-    return render_template("shoes.html")
+    context ={
+        "zagolovok" : "Обувь",
+    }
+    return render_template("shoes.html", **context)
 
 if __name__ == "__main__": 
     app.run(debug=True)
