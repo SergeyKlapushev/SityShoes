@@ -3,7 +3,7 @@
 
 <head>    
     <meta charset="UTF-8">
-    <link rel="stylesheet" type='text/css'>
+    <link rel="stylesheet">
     <title>
         {%block title%}
             Магазин одежды
@@ -11,20 +11,21 @@
     </title>
 </head>
 
+
 <body>
     <center>
         {% block content%}
-            "Вы находитесь на странице"
+            Вы находитесь на странице
         {%endblock%}
     </center>
-    <div>
-        <ul>
-            <li><a href="/main/">Главная</a></li>
-            <li><a href="/hats/">Шляпы</a></li>
-            <li><a href="/clothes/">Одежда</a></li>
-            <li><a href="/shoes/">Обувь</a></li>
-        </ul>
+    {% block linkets %}
+    <div class="css">
+        <ul> <li><a href="/main/">Главная</a></li> </ul>
+        <ul> <li><a href="/hats/">Шляпы</a></li> </ul>
+        <ul> <li><a href="/clothes/">Одежда</a></li> </ul>
+        <ul> <li><a href="/shoes/">Обувь</a></li> </ul>
+        <ul><li><a href="/loging/">Войти</a></li></ul>    
     </div>
-    
+    {% endblock %}
 </body>
 </html>

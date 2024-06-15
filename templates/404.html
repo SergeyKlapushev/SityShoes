@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<style>
+    div { height: 920px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+</style>
+
+<div>
+    <h1>Станица не найдена</h1>
+    <h1>Попробуте вернуться на <a href="{{ url_for('main') }}">Главную</a></h1>
+</div>
+{% block linkets%}
+{%endblock%}
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <title>
+        {%block title%}
+            Магазин одежды
+        {%endblock%}
+    </title>
+</head>
+
+<body>
+    <center>
+        {% block content%}
+            <h1>Выполните вход</h1>
+        {%endblock%}
+    </center>
+    {% block linkeds %}
+    <form action="/loging" method="post">
+        <center>
+            <input type="text" name="name" placeholder="Имя"><br>
+            <p><input type="text" email="email" placeholder="email"></p>
+            <input type="submit" value="Войти">
+        </center>
+    </form>  
+    {%endblock%}
+</body>
+</html>
